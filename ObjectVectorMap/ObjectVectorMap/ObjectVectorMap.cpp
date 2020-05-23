@@ -45,8 +45,9 @@ int main()
 		cout << "Input year of manufacturee" << "\n";
 		cin >> VipMachine;
 		c1.insert(id, VipMachine);
+		//тут что-то изменилось (ничего)
 	}
 
-
+	
 
 }
