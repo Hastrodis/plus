@@ -1,5 +1,3 @@
 ﻿  ObjectVectorMap.cpp
-  machine.cpp
-  Создание кода...
-D:\учеба\3-ий курс\6 семестр\C++\Гитхаб\plus\ObjectVectorMap\ObjectVectorMap\ObjectVectorMap.cpp(38,8): warning C4101:  i: неиспользованная локальная переменная
-  ObjectVectorMap.vcxproj -> D:\учеба\3-ий курс\6 семестр\C++\Гитхаб\plus\ObjectVectorMap\Debug\ObjectVectorMap.exe
+C:\C++KURS\plus\ObjectVectorMap\ObjectVectorMap\ObjectVectorMap.cpp(44,8): warning C4101:  i: неиспользованная локальная переменная
+  ObjectVectorMap.vcxproj -> C:\C++KURS\plus\ObjectVectorMap\Debug\ObjectVectorMap.exe

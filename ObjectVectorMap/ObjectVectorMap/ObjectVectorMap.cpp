@@ -22,12 +22,17 @@ int main()
 	{
 		int id;
 		int VipMachine; 
+		int IDVlad;
 		cout << "Input ID Machine" << "\n";
 		cin >> id;
 		a[i]->setIdMachine(id);
 		cout << "Input year of manufacturee" << "\n";
 		cin >> VipMachine;
 		a[i]->setVipMachine(VipMachine);
+		cout << "ID Vladel" << "\n";
+		cin >> IDVlad;
+		a[i]->mVlad->setIdVladel(IDVlad);
+
 	}
 
 
@@ -35,6 +40,7 @@ int main()
 		cout << "\n" << i+1 << " Vector element \n";
 		cout << a[i]->getIdMachine() << "\n";
 		cout << a[i]->getVipMachine() << "\n";
+		cout << a[i]->mVlad->getIdVladel() << "\n";
 	}	int i;
 	/*
 	mp c1;
