@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "machine.h"
-#include "Vladel.cpp"
+//#include "Vladel.h"
 
 
 

@@ -1,29 +1,5 @@
-﻿Сборка начата 13.02.2020 13:36:10.
-     1>Проект "F:\C++KURS\ObjectVectorMap\ObjectVectorMap\ObjectVectorMap.vcxproj" в узле 2 (целевые объекты Build).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\ObjectVectorMap.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt ObjectVectorMap.cpp
-         ObjectVectorMap.cpp
-     1>c:\program files (x86)\microsoft visual studio 12.0\vc\include\xtree(1319): error C2100: недопустимое косвенное обращение
-                 f:\c++kurs\objectvectormap\objectvectormap\objectvectormap.cpp(47): см. ссылку на создание экземпляров функции шаблон при компиляции "void std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::insert<int>(_Iter,_Iter)"
-                 with
-                 [
-                     _Kty=machine *
-         ,            _Ty=machine *
-         ,            _Pr=std::less<machine *>
-         ,            _Alloc=std::allocator<std::pair<machine *const ,machine *>>
-         ,            _Iter=int
-                 ]
-                 f:\c++kurs\objectvectormap\objectvectormap\objectvectormap.cpp(47): см. ссылку на создание экземпляров функции шаблон при компиляции "void std::_Tree<std::_Tmap_traits<_Kty,_Ty,_Pr,_Alloc,false>>::insert<int>(_Iter,_Iter)"
-                 with
-                 [
-                     _Kty=machine *
-         ,            _Ty=machine *
-         ,            _Pr=std::less<machine *>
-         ,            _Alloc=std::allocator<std::pair<machine *const ,machine *>>
-         ,            _Iter=int
-                 ]
-     1>Сборка проекта "F:\C++KURS\ObjectVectorMap\ObjectVectorMap\ObjectVectorMap.vcxproj" завершена (целевые объекты Build) с ошибкой.
-
-Ошибка сборки.
-
-Затраченное время: 00:00:01.47
+﻿  ObjectVectorMap.cpp
+  machine.cpp
+  Создание кода...
+D:\учеба\3-ий курс\6 семестр\C++\Гитхаб\plus\ObjectVectorMap\ObjectVectorMap\ObjectVectorMap.cpp(38,8): warning C4101:  i: неиспользованная локальная переменная
+  ObjectVectorMap.vcxproj -> D:\учеба\3-ий курс\6 семестр\C++\Гитхаб\plus\ObjectVectorMap\Debug\ObjectVectorMap.exe

@@ -1,4 +1,5 @@
 #pragma once
+#include "Vladel.h"
 class machine
 {
 public:
@@ -13,6 +14,6 @@ public:
 	int getIdMachine();
 	int getVipMachine();
 
-
+	Vladel* mVlad;
 };
 
