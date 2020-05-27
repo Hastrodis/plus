@@ -1,6 +1,6 @@
 ﻿#pragma once
 #include <iostream>
-
+#include <cmath>
 
 
 #define NUMBER_SYSTEM_BASE_CODE -1;
@@ -10,20 +10,35 @@
 #define NUMBER_NOT_NULL_TEXT "Число не может быть 0!";  //#define NUMBER_NOT_NULL_TEXT "The number must not be zero!";
 
 using namespace std;
+//char digit(int num){}
+//делит на целую и дробную
+void round(double a, double* a1, double* a2);
+char drob(double a, int p);
 
 int main()
 {
-	//пробная фигня пока не трогайте
-	double a;
+	//a - число, а1 - целая часть, а2 - дробная часть.
+	double a, a1 = 0, a2 = 0;
+	//система счисления
 	int b;
+	//
+	char string [] = "";
     setlocale(LC_ALL, "Russian");
 	cout << "Введите число \n";
 	cin >> a;
 	cout << "Введите систему счисления" << endl;
 	cin >> b;
-	a = (double)a;
-	cout << "дробная часть A = " << a << endl;
-	//string s = integerPart(a,b);
+
+
+	//cout << "Дробная часть от a = " << drob(a, b) << endl;
+	//-------------------------------------дробная часть-------------------------------------
+	//drob(a2, b, string);
+	//cout << string << endl;
+}
+
+//делит на целую и дробную
+void round(double a, double* a1, double* a2) {
+	*a2 = modf(a, a1);
 }
 
 //замена числа на цифру, к примеру switch(10) = A
@@ -68,17 +83,21 @@ int integerPart(int a, int p) {
 }
 
 //Дробная часть - преобразование
-double drob(double a, int p) {
-	if (a < 1) {
+char drob(double a, int p) {
+	int k = 0;
+	double g = 0;
 		a *= p;
-		return digit((int)a);
-		a = (double)a;
-	}
+		if (a > (p - 1)) {
+			return digit((int)a);
+			round(a, &g, &a);
+		}
+		//s = '1';
+		//s[k] = digit(1);
 	
 	
 }
 
-//целочисленная часть (код от Максима), суть в том, что полученное число отправляется в s по указателю
+//целочисленная часть, суть в том, что полученное число отправляется в s по указателю
 int integerPart(int a, int p, char* s) {
 
     if (p < 2) {
