@@ -13,10 +13,20 @@ using namespace std;
 
 int main()
 {
-    cout << "Hello World!\n";
+	//пробная фигня пока не трогайте
+	double a;
+	int b;
     setlocale(LC_ALL, "Russian");
+	cout << "Введите число \n";
+	cin >> a;
+	cout << "Введите систему счисления" << endl;
+	cin >> b;
+	a = (double)a;
+	cout << "дробная часть A = " << a << endl;
+	//string s = integerPart(a,b);
 }
 
+//замена числа на цифру, к примеру switch(10) = A
 char digit(int num)
 {
     switch (num) {
@@ -38,7 +48,8 @@ char digit(int num)
     case 15: return 'F';
     }
 }
-
+//это вроде как классы исключений для вывода ошибок (сверху прописаны)
+/*
 class NumberError
     {
 
@@ -48,16 +59,37 @@ public:
     virtual const char* getMessage() { return NUMBER_SYSTEM_BASE_TEXT; };
     virtual int getCode() { return NUMBER_SYSTEM_BASE_CODE; };
 
-};
+};//*/
 
+//другая вариация для целочисленной части
+int integerPart(int a, int p) {
+	//не доделано
+	return 0;
+}
+
+//Дробная часть - преобразование
+double drob(double a, int p) {
+	if (a < 1) {
+		a *= p;
+		return digit((int)a);
+		a = (double)a;
+	}
+	
+	
+}
+
+//целочисленная часть (код от Максима), суть в том, что полученное число отправляется в s по указателю
 int integerPart(int a, int p, char* s) {
 
     if (p < 2) {
-        throw new NumberSystemBase();
+        //throw new NumberSystemBase();
+		cout << "Ошибка, система счисления меньше 2" << endl;
     }
-
+	//берется целочисленная часть
     int num = (int)a;
+	//остаток от деления на p (систему счисления)
     int rest = num % p;
+	//num делится на p и сохраняется (типо num = num / p)
     num /= p;
     if (num == 0)
     {
