@@ -1,4 +1,4 @@
 ﻿  Convert.cpp
-C:\Users\79236\Documents\GitHub\plus\Convert\Convert.cpp(65): warning C4715: digit: значение возвращается не при всех путях выполнения
-C:\Users\79236\Documents\GitHub\plus\Convert\Convert.cpp(98): warning C4715: drob: значение возвращается не при всех путях выполнения
-  Convert.vcxproj -> C:\Users\79236\Documents\GitHub\plus\Convert\Debug\Convert.exe
+D:\учеба\3-ий курс\6 семестр\C++\Гитхаб\plus\Convert\Convert.cpp(65): warning C4715:  digit: значение возвращается не при всех путях выполнения
+D:\учеба\3-ий курс\6 семестр\C++\Гитхаб\plus\Convert\Convert.cpp(132): warning C4715:  drob: значение возвращается не при всех путях выполнения
+  Convert.vcxproj -> D:\учеба\3-ий курс\6 семестр\C++\Гитхаб\plus\Convert\Debug\Convert.exe
