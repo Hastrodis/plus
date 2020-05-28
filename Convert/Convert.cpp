@@ -4,16 +4,41 @@
 
 
 #define NUMBER_SYSTEM_BASE_CODE -1;
-#define NUMBER_SYSTEM_BASE_TEXT "Система счислений меньше 2!"; //#define NUMBER_SYSTEM_BASE_TEXT "The base of the number system is less than 2!";
+#define NUMBER_SYSTEM_BASE_TEXT "Система счислений меньше 2!"; 
+//#define NUMBER_SYSTEM_BASE_TEXT "The base of the number system is less than 2!";
 
 #define NUMBER_NOT_NULL_CODE 101;
-#define NUMBER_NOT_NULL_TEXT "Число не может быть 0!";  //#define NUMBER_NOT_NULL_TEXT "The number must not be zero!";
+#define NUMBER_NOT_NULL_TEXT "Число не может быть 0!";  
+//#define NUMBER_NOT_NULL_TEXT "The number must not be zero!";
+//это вроде как классы исключений для вывода ошибок (сверху прописаны)
 
+//класс ошибки 
+class NumberError
+{
+public:
+	virtual const char* getMessage() = 0;
+	virtual int getCode() = 0;
+};
+//класс ошибки - система счисления меньше двух
+class NumberSystemBase :NumberError {
+public:
+	virtual const char* getMessage() { return NUMBER_SYSTEM_BASE_TEXT; };
+	virtual int getCode() { return NUMBER_SYSTEM_BASE_CODE; };
+
+};
+//класс ошибки - число равно нулю
+class NumberNotNull :NumberError {
+public:
+	virtual const char* getMessage() { return NUMBER_NOT_NULL_TEXT; };
+	virtual int getCode() { return NUMBER_NOT_NULL_CODE; };
+};
+//*/
 using namespace std;
 //char digit(int num){}
 //делит на целую и дробную
 void round(double a, double* a1, double* a2);
 char drob(double a, int p);
+int integerPart(int a, int p, char* s);
 
 int main()
 {
@@ -22,13 +47,30 @@ int main()
 	//система счисления
 	int b;
 	//
-	char string [] = "";
-    setlocale(LC_ALL, "Russian");
-	cout << "Введите число \n";
-	cin >> a;
-	cout << "Введите систему счисления" << endl;
-	cin >> b;
-
+	char s[100] = { 0 };
+	try {
+		setlocale(LC_ALL, "Russian");
+		cout << "Введите число \n";
+		cin >> a;
+		if (a == 0) throw new NumberNotNull;
+		cout << "Введите систему счисления" << endl;
+		cin >> b;
+		if (b < 2) {
+			throw new NumberSystemBase();
+		}
+		try {
+		
+		}
+		catch (NumberSystemBase* ex) {
+			cout << ex->getMessage() << " Code: " << ex->getCode();
+		}
+	}
+	catch (NumberNotNull* ex) {
+		cout << ex->getMessage() << " Code: " << ex->getCode();
+	}
+    
+	
+	
 
 	//cout << "Дробная часть от a = " << drob(a, b) << endl;
 	//-------------------------------------дробная часть-------------------------------------
@@ -63,18 +105,7 @@ char digit(int num)
     case 15: return 'F';
     }
 }
-//это вроде как классы исключений для вывода ошибок (сверху прописаны)
-/*
-class NumberError
-    {
 
-    };
-class NumberSystemBase :NumberError {
-public:
-    virtual const char* getMessage() { return NUMBER_SYSTEM_BASE_TEXT; };
-    virtual int getCode() { return NUMBER_SYSTEM_BASE_CODE; };
-
-};//*/
 
 //другая вариация для целочисленной части
 int integerPart(int a, int p) {
@@ -87,7 +118,7 @@ char drob(double a, int p) {
 	int k = 0;
 	double g = 0;
 		a *= p;
-		if (a > (p - 1)) {
+		if (a > (p-1)) {
 			return digit((int)a);
 			round(a, &g, &a);
 		}
