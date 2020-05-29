@@ -1,5 +1,5 @@
 ﻿  Convert.cpp
 D:\учеба\3-ий курс\6 семестр\C++\Гитхаб\plus\Convert\Convert.cpp(90,24): warning C4244:  аргумент: преобразование "double" в "int", возможна потеря данных
 D:\учеба\3-ий курс\6 семестр\C++\Гитхаб\plus\Convert\Convert.cpp(92,12): warning C4244:  инициализация: преобразование "double" в "int", возможна потеря данных
-D:\учеба\3-ий курс\6 семестр\C++\Гитхаб\plus\Convert\Convert.cpp(64): warning C4715:  digit: значение возвращается не при всех путях выполнения
+D:\учеба\3-ий курс\6 семестр\C++\Гитхаб\plus\Convert\Convert.cpp(64): warning C4715:  snatch: значение возвращается не при всех путях выполнения
   Convert.vcxproj -> D:\учеба\3-ий курс\6 семестр\C++\Гитхаб\plus\Convert\Debug\Convert.exe

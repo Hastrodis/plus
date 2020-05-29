@@ -1,8 +1,17 @@
 #include "stdafx.h"
 #include "machine.h"
-//#include "Vladel.h"
+#include "Vladel.h"
 
+machine::machine(){
+	this->mVlad = new Vladel();
+}
 
+machine::~machine(){
+	if (mVlad != 0) {
+		delete mVlad;
+		mVlad = 0;
+	}
+}
 
 void machine::setIdMachine(int id)
 {

@@ -31,6 +31,7 @@ public:
 	virtual int getCode() { return NUMBER_NOT_NULL_CODE; };
 };
 //*/
+
 using namespace std;
 //char digit(int num){}
 //делит на целую и дробную

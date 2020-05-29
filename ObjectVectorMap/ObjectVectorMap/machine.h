@@ -3,7 +3,8 @@
 class machine
 {
 public:
-
+	machine();
+	~machine();
 
 	int idMachine;
 	int VipMachine;
