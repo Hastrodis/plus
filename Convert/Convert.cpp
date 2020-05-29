@@ -41,7 +41,7 @@ int integerPart(int a, int p, char* s);
 
 
 //замена чисел типа int на цифры/буквы типа char
-char digit(int num)
+char snatch(int num)
 {
     switch (num) {
     case 0: return '0';
@@ -134,7 +134,7 @@ void drob(double a, int b, char* s) {
 	double a1 = a;
 	do {
 		a1 *= b;
-		s[k++] = digit((int)a1);
+		s[k++] = snatch((int)a1);
 		a1 -= (int)a1;
 		it++;
 	} while (a1 > 0.00000001);
@@ -143,11 +143,10 @@ void drob(double a, int b, char* s) {
 //с ограничением
 void drob(double a, int b, char* s, int it1) {
 	int it = 0, k = 0;
-	double a1 = a;
 	do {
-		a1 *= b;
-		s[k++] = digit((int)a1);
-		a1 -= (int)a1;
+		a *= b;
+		s[k++] = snatch((int)a);
+		a -= (int)a;
 		it++;
 	} while (it < it1); //ограничение через задание предела (кол-во знаков после запятой)
 	s[k] = '\0'; //конец строки
@@ -161,18 +160,18 @@ int integerPart(int a, int b, char* s) {
 		cout << "Ошибка, система счисления меньше 2" << endl;
     }
 	//берется целочисленная часть
-    int num = (int)a;
+    int a1 = (int)a;
 	//остаток от деления на p (систему счисления)
-    int rest = num % b;
+    int rest = a1 % b;
 	//num делится на p и сохраняется (типо num = num / p)
-    num /= b;
-    if (num == 0)
+    a1 /= b;
+    if (a1 == 0)
     {
 		//когда рекурсия дойдет до конца, начнет возвращать значения
-        s[0] = digit(rest); return 1;
+        s[0] = snatch(rest); return 1;
     }
-    int k = integerPart(num, b, s);
-    s[k++] = digit(rest);
+    int k = integerPart(a1, b, s);
+    s[k++] = snatch(rest);
     return k;
 }
 
