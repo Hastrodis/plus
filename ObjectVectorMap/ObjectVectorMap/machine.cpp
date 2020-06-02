@@ -13,10 +13,15 @@ machine::~machine(){
 	}
 }
 
-void machine::setIdMachine(int id)
+machine& machine::operator=(const machine & idMachine)
 {
+	int id;
 	idMachine = id;
 }
+/*void machine::setIdMachine(int id)
+{
+	
+}*/
 
 void machine::setVipMachine(int year)
 {

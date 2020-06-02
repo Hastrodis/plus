@@ -4,14 +4,17 @@
 #include "stdafx.h"
 #include "machine.h"
 #include <vector>
-//#include <map>
 #include <iostream>
 
 using namespace std;
 
-//typedef std::map<int, int> mp;
 int main()
 {
+	/*machine& mVlad = (const machine & other)
+	{
+
+	}*/
+	
 	vector<machine*> a;
 	a.push_back(new machine);
 	a.push_back(new machine);
@@ -42,20 +45,8 @@ int main()
 		cout << a[i]->getVipMachine() << "\n";
 		cout << a[i]->mVlad->getIdVladel() << "\n";
 	}	int i;
-	/*
-	mp c1;
-	for (int i = 3; i < 5; i++)
-	{
-		int id;
-		int VipMachine;
-		cout << "Input ID Machine" << "\n";
-		cin >> id;		
-		cout << "Input year of manufacturee" << "\n";
-		cin >> VipMachine;
-		c1.insert(id, VipMachine);
-		
-	}//*/
-
 	
+	a.~vector;
+
 
 }
