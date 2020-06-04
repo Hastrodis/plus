@@ -3,38 +3,34 @@
 using namespace std;
 //пустая
 Stroka::Stroka() {
-	char s[] = { 0 };
-	count = 0;
+	s = nullptr;
 }
-//с размерностью
-Stroka::Stroka(int a) {
-	count = a;
-	char s[] = { 0 };
-	
+//помещение строки сюда
+Stroka::Stroka(const char *s) {
+	int length = strlen(s);
+	this->s = new char[length +1];
+	for (int i = 0; i < length; i++) {
+		this->s[i] = s[i];
+	}
+	this->s[length] = '\0';
+}
+
+Stroka::Stroka(const Stroka& other) {
+	int length = strlen(other.s);
+	this->s = new char[length + 1];
+	for (int i = 0; i < length; i++) {
+		this->s[i] = other.s[i];
+	};
+	this->s[length] = '\0';
+}
+
+
+void Stroka::Print() {
+	cout << s;
 }
 
 Stroka::~Stroka() {
-	/*delete *s;
-	delete s[];*/
+	delete[] this->s;
 }
 
-int Stroka::getCount() {
-	return count;
-}
 
-void Stroka::interS(char s1, Stroka *s, int i) {
-	s[i] = s1;
-}
-
-void Stroka::print() {
-	std::cout << s << endl;
-}
-/*
-void Stroka::print(char *s) {
-	std::cout << s << endl;
-}
-/*
-void Stroka::interS(char s1, char* s, int i) {
-	s[i] = s1;
-}
-*/
