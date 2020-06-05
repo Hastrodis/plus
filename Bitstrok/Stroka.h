@@ -42,7 +42,7 @@ public:
 		newS.s[thisLength + otherLength] = '\0';
 		return newS;
 	}
-	/*оператор []*/  //char  operator [](int i) { return this->vChar[i]; }
+	/*оператор []*/  char&  operator [](int i) { return this->s[i]; }
 	void Print();
 	~Stroka();
 };
@@ -56,3 +56,4 @@ class int_Stroka : public Stroka
 		int_Stroka();
 		~int_Stroka();
 };
+

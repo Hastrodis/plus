@@ -22,6 +22,8 @@ int main()
 
 	Stroka resoult = s + s1 + s2;
 	cout << "\nВыведенная строка resoult:" << endl;
+
+	resoult[2] = '5';
 	resoult.Print();
 
 
