@@ -1,14 +1,17 @@
 #pragma once
 #include <iostream>
+#include<vector>
+
 class Stroka
 {
+/*protected:
+	vector<char> vChar;*/
 private:
 	char *s;
 public:
-	Stroka(); 
-	Stroka(const char *s);
-	//конструктор копирования (без него не работает оператор +, так как запинается об =)
-	Stroka(const Stroka& other); 
+	Stroka();					 //пустой конструктор
+	Stroka(const char *s);		 //обычный конструктор
+	Stroka(const Stroka& other); //конструктор копирования
 	/*присваивание*/ Stroka& operator =(const Stroka& other) {
 		if (this->s != nullptr) {
 			//удаление шлака
@@ -34,17 +37,22 @@ public:
 		}
 		for (int j = 0; j < otherLength; j++, i++)
 		{
-			newS.s[i] = other.s[i];
+			newS.s[i] = other.s[j];
 		}
 		newS.s[thisLength + otherLength] = '\0';
 		return newS;
 	}
+	/*оператор []*/  //char  operator [](int i) { return this->vChar[i]; }
 	void Print();
 	~Stroka();
-
 };
 
+//унаследованный класс - числовая строка
 class int_Stroka : public Stroka 
 {
+	private:
 
+	public:
+		int_Stroka();
+		~int_Stroka();
 };

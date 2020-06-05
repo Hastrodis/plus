@@ -33,4 +33,12 @@ Stroka::~Stroka() {
 	delete[] this->s;
 }
 
+//--------------Для унаследованного класса--------------------------
 
+int_Stroka::int_Stroka() {
+
+}
+
+int_Stroka::~int_Stroka() {
+
+}

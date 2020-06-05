@@ -7,8 +7,23 @@ int main()
 {
 	setlocale(LC_ALL, "ru");
 	//cout << "Введите строку" << endl;
+
 	Stroka s("Text");
-	cout << "Выведенная строка:" << endl;
+	cout << "Выведенная строка s:" << endl;
 	s.Print();
+
+	Stroka s1(" and text");
+	cout << "\nВыведенная строка s1:" << endl;
+	s1.Print();
+
+	Stroka s2(" and text");
+	cout << "\nВыведенная строка s2:" << endl;
+	s1.Print();
+
+	Stroka resoult = s + s1 + s2;
+	cout << "\nВыведенная строка resoult:" << endl;
+	resoult.Print();
+
+
 }
 
