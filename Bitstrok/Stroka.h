@@ -47,13 +47,27 @@ public:
 	~Stroka();
 };
 
-//унаследованный класс - числовая строка
-class int_Stroka : public Stroka 
+//числовая строка
+class int_Stroka 
 {
 	private:
-
+		int* s;
+		int setSize(int* s);
 	public:
 		int_Stroka();
+		int_Stroka(int *s);
 		~int_Stroka();
+		void Print();
 };
 
+//шаблон
+template<class T, typename T1>
+class Shablon_Stroka {
+	private:
+		T1* s;
+	public: 
+		Shablon_Stroka();
+		Shablon_Stroka(const T1 *Ss);
+		~Shablon_Stroka();
+		void Print();
+};

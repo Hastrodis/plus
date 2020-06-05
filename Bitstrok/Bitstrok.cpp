@@ -6,9 +6,14 @@ using namespace std;
 int main()
 {
 	setlocale(LC_ALL, "ru");
-	//cout << "Введите строку" << endl;
 
-	Stroka s("Text");
+	Shablon_Stroka<Stroka, char> s1("chjgh");
+	s1.Print();
+
+	int array[] = { 10, 0, 5 };
+	int_Stroka Sarray = int_Stroka(array);
+	delete[] array;
+	/*Stroka s("Text");
 	cout << "Выведенная строка s:" << endl;
 	s.Print();
 
@@ -22,10 +27,8 @@ int main()
 
 	Stroka resoult = s + s1 + s2;
 	cout << "\nВыведенная строка resoult:" << endl;
-
 	resoult[2] = '5';
-	resoult.Print();
-
-
+	resoult.Print();*/
+	
 }
 

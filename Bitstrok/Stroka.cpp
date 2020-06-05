@@ -33,12 +33,50 @@ Stroka::~Stroka() {
 	delete[] this->s;
 }
 
-//--------------Для унаследованного класса--------------------------
+//--------------Для числовой строки--------------------------
 
 int_Stroka::int_Stroka() {
-
+	s = { 0 };
+}
+//конструктор под количество элементов
+int_Stroka::int_Stroka(int *s) {
+	for (int i = 0; i < sizeof(s) / sizeof(int); i++) {
+		this->s[i] = s[i];
+	}
 }
 
 int_Stroka::~int_Stroka() {
 
+}
+
+int int_Stroka::setSize(int *s) {
+	int len = sizeof(s) / sizeof(int);
+	return len;
+}
+
+void int_Stroka::Print() {
+	int len = setSize(this->s);
+	for (int i = 0; i < len; i++) {
+		cout << endl;
+	}
+}
+
+//----------------------Шаблоны--------------------------
+template<class T, typename T1>
+Shablon_Stroka<T, T1>::Shablon_Stroka() {
+	s = NULL;
+}
+
+template<class T, typename T1>
+Shablon_Stroka<T, T1>::Shablon_Stroka(const T1* Ss) {
+
+}
+
+template<class T, typename T1>
+Shablon_Stroka<T, T1>::~Shablon_Stroka() {
+	delete[] this->s;
+}
+template<class T, typename T1>
+void Shablon_Stroka<T, T1>::Print() {
+	cout << s;
 }
