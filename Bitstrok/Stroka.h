@@ -52,22 +52,27 @@ class int_Stroka
 {
 	private:
 		int* s;
-		int setSize(int* s);
+		int len;
 	public:
 		int_Stroka();
 		int_Stroka(int *s);
 		~int_Stroka();
 		void Print();
+		void setSize(int* s);
+		int getSize();
 };
 
 //шаблон
-template<class T, typename T1>
+/*template<class T, typename T1>
 class Shablon_Stroka {
 	private:
 		T1* s;
+		if (T1 == int) {
+			int len;
+		}
 	public: 
-		Shablon_Stroka();
-		Shablon_Stroka(const T1 *Ss);
+		//Shablon_Stroka();
+		Shablon_Stroka(const T1* Ss);
 		~Shablon_Stroka();
 		void Print();
-};
+};//*/
