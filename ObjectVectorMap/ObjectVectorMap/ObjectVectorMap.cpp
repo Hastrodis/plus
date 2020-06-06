@@ -8,7 +8,7 @@
 
 using namespace std;
 
-int main()
+int main() //kkk
 {		
 	vector<machine*> a;
 	a.push_back(new machine);

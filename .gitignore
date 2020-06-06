@@ -21,3 +21,9 @@ Release
 *.vbproj.user
 ipch
 *sdf
+ObjectVectorMap/.vs/ObjectVectorMap/v16/Browse.VC.opendb
+ObjectVectorMap/ObjectVectorMap/Debug
+Convert/Debug
+
+ObjectVectorMap/ObjectVectorMap/Debug/vc142.pdb
+ObjectVectorMap/ObjectVectorMap/Debug/vc142.idb
