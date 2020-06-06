@@ -63,16 +63,25 @@ class int_Stroka
 };
 
 //шаблон
-/*template<class T, typename T1>
+template<class T>
 class Shablon_Stroka {
-	private:
-		T1* s;
-		if (T1 == int) {
-			int len;
-		}
+	/*private:
+		vector<T> st;*/
 	public: 
+		std::vector<T> st;
 		//Shablon_Stroka();
-		Shablon_Stroka(const T1* Ss);
-		~Shablon_Stroka();
-		void Print();
+		Shablon_Stroka(const T* Ss, int l) {
+			st.clear();
+			for (int i = 0; i < l; i++) {
+				st.push_back(Ss[i]);
+			}
+		};
+		~Shablon_Stroka() {
+			st.clear();
+		};
+		void Print() {
+			for (int i = 0; i < st.size(); i++) {
+				std::cout << st[i] << "\n";
+			}
+		};
 };//*/

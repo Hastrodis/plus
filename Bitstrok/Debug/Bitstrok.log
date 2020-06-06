@@ -1,4 +1,6 @@
 ﻿  Bitstrok.cpp
-  Stroka.cpp
-  Создание кода...
+D:\учеба\3-ий курс\6 семестр\C++\Гитхаб\plus\Bitstrok\Stroka.h(83,2): warning C4018:  <: несоответствие типов со знаком и без знака
+D:\учеба\3-ий курс\6 семестр\C++\Гитхаб\plus\Bitstrok\Stroka.h(82): message :  во время компиляции функции-члена класс шаблон "void Shablon_Stroka<double>::Print(void)"
+D:\учеба\3-ий курс\6 семестр\C++\Гитхаб\plus\Bitstrok\Bitstrok.cpp(24): message :  выполняется компиляция ссылки на экземпляр шаблон функции "void Shablon_Stroka<double>::Print(void)"
+D:\учеба\3-ий курс\6 семестр\C++\Гитхаб\plus\Bitstrok\Bitstrok.cpp(22): message :  выполняется компиляция ссылки на экземпляр класс шаблон функции "Shablon_Stroka<double>"
   Bitstrok.vcxproj -> D:\учеба\3-ий курс\6 семестр\C++\Гитхаб\plus\Bitstrok\Debug\Bitstrok.exe

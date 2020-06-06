@@ -13,14 +13,16 @@ int main()
 	int array[] = { 10, 0, 5 };
 	int_Stroka Sarray = int_Stroka(array);
 	delete[] array;*/
+
 	Stroka s("Text");
 	cout << "Выведенная строка s:" << endl;
 	s.Print();
 
-	Stroka s1(" and text");
+	double d[] = {0.5, 0.6, 0.7};
+	Shablon_Stroka<double> s1(d, 3);
 	cout << "\nВыведенная строка s1:" << endl;
 	s1.Print();
-
+	/*
 	Stroka s2(" and text");
 	cout << "\nВыведенная строка s2:" << endl;
 	s1.Print();

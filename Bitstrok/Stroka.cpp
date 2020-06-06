@@ -66,25 +66,30 @@ void int_Stroka::Print() {
 }
 
 //----------------------Шаблоны--------------------------
-/*template<class T, typename T1>
-Shablon_Stroka<T, T1>::Shablon_Stroka() {
-	if (T1 == int) { s = { 0 }; }
-	else if (T1 == char) { s = nullptr; }
-	
-}*/
+/*template<class T>
+Shablon_Stroka<T>::Shablon_Stroka(const T* Ss, int l) {
+	//this->
+	st.clear();
+	for (int i = 0; i < l; i++) {
+		st.push_back(Ss[i]);
+	}
+}//*/
+
+/*template<class T>
+Shablon_Stroka<T>::~Shablon_Stroka() {
+	st.clear();
+	//delete[] this->s;
+	//delete this->len;
+}//*/
+
+/*template<class T>
+void Shablon_Stroka<T>::Print() {
+	for (int i = 0; i < st.size(); i++) {
+		cout << st[i] << "\n";
+	}
+}//*/
+
 /*
-template<class T, typename T1>
-Shablon_Stroka<T, T1>::Shablon_Stroka(const T1* Ss) {
-
-}
-
-template<class T, typename T1>
-Shablon_Stroka<T, T1>::~Shablon_Stroka() {
-	delete[] this->s;
-	delete this->len;
-}
-
-
 template<class T, typename T1>
 void Shablon_Stroka<T, T1>::Print() {
 	if (T1 == char) {
