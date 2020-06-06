@@ -16,5 +16,7 @@ public:
 	int getVipMachine();
 
 	Vladel* mVlad;
+
+	void operator=(const machine& mach);
 };
 

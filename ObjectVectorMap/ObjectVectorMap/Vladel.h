@@ -2,11 +2,13 @@
 
 class Vladel
 {
-public:
+protected:
 	int IdVladel;
-
+public:
 	void setIdVladel(int id);
 
 	int getIdVladel();
+
+	void operator=(const Vladel& vld);
 };
 

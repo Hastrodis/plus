@@ -1,6 +1,2 @@
-﻿  machine.cpp
-C:\C++KURS\plus\ObjectVectorMap\ObjectVectorMap\machine.cpp(17,1): error C2600:  machine::operator =: нельзя определить специальную функцию-член, созданную компилятором (сначала необходимо объявить ее в классе)
-C:\C++KURS\plus\ObjectVectorMap\ObjectVectorMap\machine.cpp(19,16): error C2678:  бинарный "=": не найден оператор, принимающий левый операнд типа "const machine" (или приемлемое преобразование отсутствует)
-C:\C++KURS\plus\ObjectVectorMap\ObjectVectorMap\machine.cpp(16,19): message :  может быть "machine &machine::operator =(const machine &)"
-C:\C++KURS\plus\ObjectVectorMap\ObjectVectorMap\machine.cpp(19,16): message :  при попытке сопоставить список аргументов "(const machine, int)"
-C:\C++KURS\plus\ObjectVectorMap\ObjectVectorMap\machine.cpp(19,16): message :  Сообщение диагностики возникло в созданной компилятором функции "machine &machine::operator =(const machine &)"
+﻿  ObjectVectorMap.cpp
+  ObjectVectorMap.vcxproj -> C:\C++KURS\plus\ObjectVectorMap\Debug\ObjectVectorMap.exe

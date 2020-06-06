@@ -9,17 +9,10 @@
 using namespace std;
 
 int main()
-{
-	/*machine& mVlad = (const machine & other)
-	{
-
-	}*/
-	
+{		
 	vector<machine*> a;
 	a.push_back(new machine);
 	a.push_back(new machine);
-
-
 
 	for (int i = 0; i < 2; i++)
 	{
@@ -38,15 +31,21 @@ int main()
 
 	}
 
-
 	for (int i = 0; i < 2; i++) {
 		cout << "\n" << i+1 << " Vector element \n";
 		cout << a[i]->getIdMachine() << "\n";
 		cout << a[i]->getVipMachine() << "\n";
 		cout << a[i]->mVlad->getIdVladel() << "\n";
-	}	int i;
+	}	
 	
-	a.~vector;
+	(*a[0]) = (*a[1]);
 
+	for (int i = 0; i < 2; i++) {
+		cout << "\n" << i + 1 << " Vector element \n";
+		cout << a[i]->getIdMachine() << "\n";
+		cout << a[i]->getVipMachine() << "\n";
+		cout << a[i]->mVlad->getIdVladel() << "\n";
+	}
 
+	a.clear();
 }

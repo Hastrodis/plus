@@ -10,3 +10,7 @@ int Vladel::getIdVladel()
 {
 	return IdVladel;
 }
+
+void Vladel::operator=(const Vladel &vld) {
+	this->IdVladel = vld.IdVladel;
+}

@@ -3,6 +3,7 @@
 #include "Vladel.h"
 
 machine::machine(){
+
 	this->mVlad = new Vladel();
 }
 
@@ -13,15 +14,17 @@ machine::~machine(){
 	}
 }
 
-machine& machine::operator=(const machine & idMachine)
+void machine::operator=(const machine & mach)
+{	
+	(*mVlad) = (*mach.mVlad);
+	idMachine = mach.idMachine;
+	VipMachine = mach.VipMachine;
+}
+
+void machine::setIdMachine(int id)
 {
-	int id;
 	idMachine = id;
 }
-/*void machine::setIdMachine(int id)
-{
-	
-}*/
 
 void machine::setVipMachine(int year)
 {
